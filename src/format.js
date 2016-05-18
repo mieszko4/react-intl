@@ -204,7 +204,7 @@ export function formatMessage(config, state, messageDescriptor = {}, values = {}
 
     let formattedMessage;
 
-    if (message) {
+    if (message !== undefined && message !== null) {
         try {
             let formatter = state.getMessageFormat(
                 message, locale, formats
